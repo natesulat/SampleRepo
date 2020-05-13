@@ -1,0 +1,21 @@
+name: Demo
+on: [push]
+
+jobs:
+  timeout-minutes: 8
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Set up NodeJS
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+    - name: NPM install
+      run: npm install
+    - name: Demonstrate issue with US
+      run: sh show-the-issue.sh en-US
+    - name: Demonstrate issue with en
+      run: sh show-the-issue.sh
+    - name: Demonstrate issue with DEV
+      run: sh show-the-issue.sh dev
