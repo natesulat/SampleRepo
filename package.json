@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/natesulat/SampleRepo#readme",
   "devDependencies": {
-    "@boost/translate": "^1.3.9"
+    "@boost/translate": "^2.0.0-alpha.1"
   }
 }
